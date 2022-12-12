@@ -23,7 +23,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/4.1/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = env('SECRET_KEY')
+SECRET_KEY = 'django-insecure-y_evqwpc1s307e&(16l*expn+@hkz!-hds@4(jt#$m&)+@oyyw'
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
@@ -82,9 +82,9 @@ WSGI_APPLICATION = 'portafolio.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
-        'NAME': env('DATABASE_NAME'),
-        'USER': env('DATABASE_USER'),
-        'PASSWORD':env('DATABASE_PASS'),
+        'NAME': 'railway',
+        'USER': 'root',
+        'PASSWORD':'TUmDAADEmYq55eP0uIE2',
         'HOST':'containers-us-west-148.railway.app',
         'PORT':'6183'
     }
