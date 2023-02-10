@@ -1,0 +1,39 @@
+{% extends 'base.html' %} {% block content %}
+<div class="d-flex align-items-center">
+  <div class="container position-relative">
+    <div class="row d-flex justify-content-center">
+      <div class="col-lg-12 text-center">
+<h1>projects</h1>
+<div >
+  <span class="pt-2 ps-1">Cantidad de personas que visitaron tu portafolio:  <b>{{ visitantes }}</b></span>
+</div>
+<div >
+  <span class="pt-2 ps-1">Cantidad de proyectos creados:  <b>{{ cantidad }}</b></span>
+</div>
+
+<div class="row">
+  {% for project in projects %}
+  <div class="col-3">
+  <div class="card" style="width: 200px;">
+    {% if project.foto_img%}
+    <img src="{{project.foto_img.url}}" class="card-img-top" alt="foto" style="width: 150px; height: 150px;">
+    {% endif %}
+    <div class="card-body">
+      <h5 class="card-title">{{project.title}}</h5>
+      <p class="card-text">{{project.descripcion}}</p>
+      <a href="{% url 'project_detail' project.id %}" class="btn btn-primary">Acciones</a>
+    </div>
+  </div>
+</div>
+  {% endfor %}
+</div>
+
+</div>
+
+</div>
+
+</div>    
+
+</div>
+
+{% endblock %}

@@ -1,0 +1,26 @@
+{% extends 'base.html' %} {% block content %}
+<div class="page-header d-flex align-items-center">
+  <div class="container position-relative">
+    <div class="row d-flex justify-content-center">
+      <div class="col-lg-6 text-center">
+<h1>Projects</h1>
+
+<ul>
+  {% for project in projects %}
+  <li>
+    <a href="{% url 'project_detail' project.id %}">
+     
+      <strong>{{project.title}}</strong>
+      {{project.id}} {{project.title}} {% endif %}
+      <p>{{project.description}}</p>
+
+    </a>
+  </li>
+  {% endfor %}
+</ul>
+
+</div>
+</div>
+</div>    
+</div>
+{% endblock %}
